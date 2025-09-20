@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f7fb; }
+      .container { max-width: 380px; margin: 10vh auto; background: #fff; padding: 28px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+      h1 { margin: 0 0 16px; font-size: 22px; }
+      form { display: grid; gap: 12px; }
+      input { padding: 12px 14px; border: 1px solid #dcdfea; border-radius: 8px; font-size: 14px; }
+      button { padding: 12px 14px; background: #4f46e5; color: #fff; border: 0; border-radius: 8px; font-size: 15px; cursor: pointer; }
+      .alt { margin-top: 14px; font-size: 13px; }
+      .msg { background: #fee2e2; color: #991b1b; padding: 10px 12px; border-radius: 8px; margin-bottom: 12px; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="msg">{{ messages[0] }}</div>
+        {% endif %}
+      {% endwith %}
+      <form method="post">
+        <input name="username" placeholder="Username" required>
+        <input name="password" placeholder="Password" type="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div class="alt">No account? <a href="{{ url_for('register') }}">Register</a></div>
+    </div>
+  </body>
+  </html>
+
+
