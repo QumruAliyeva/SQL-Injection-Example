@@ -1,0 +1,36 @@
+# Python cache ve bytecode dosyaları
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Sanal ortam (virtual environment)
+venv/
+ENV/
+env/
+.venv/
+
+# Flask / instance config
+instance/
+*.db
+*.sqlite3
+
+# IDE / Editor dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log dosyaları
+*.log
+
+# Pytest / coverage
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
